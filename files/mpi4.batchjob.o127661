@@ -1,0 +1,78 @@
+--------------------------------------
+Running PBS prologue script
+
+Checking all prerequisites...
+Done.
+
+Running on host grad04
+
+Initial Time is Mon Jun 15 18:15:20 BRT 2020
+
+Directory is /home/pp12720/mandelbrot-mpi
+
+This jobs runs on the following nodes:
+grad04 grad07 grad06 grad05
+
+JOB_ID:
+127661
+
+NPOINTS: 500 | Area of Mandlebrot set =   1.51121250 +/-   0.00302243
+Time =   0.09114790 seconds
+NPOINTS: 1000 | Area of Mandlebrot set =   1.51020562 +/-   0.00151021
+Time =   0.15900111 seconds
+NPOINTS: 1500 | Area of Mandlebrot set =   1.50959500 +/-   0.00100640
+Time =   0.35347295 seconds
+NPOINTS: 2000 | Area of Mandlebrot set =   1.50928453 +/-   0.00075464
+Time =   0.63020587 seconds
+NPOINTS: 2500 | Area of Mandlebrot set =   1.50905790 +/-   0.00060362
+Time =   1.00533605 seconds
+NPOINTS: 3000 | Area of Mandlebrot set =   1.50903813 +/-   0.00050301
+Time =   1.44797707 seconds
+NPOINTS: 3500 | Area of Mandlebrot set =   1.50894735 +/-   0.00043113
+Time =   1.98447204 seconds
+NPOINTS: 4000 | Area of Mandlebrot set =   1.50881590 +/-   0.00037720
+Time =   2.59470201 seconds
+NPOINTS: 4500 | Area of Mandlebrot set =   1.50882444 +/-   0.00033529
+Time =   3.25441909 seconds
+NPOINTS: 5000 | Area of Mandlebrot set =   1.50875573 +/-   0.00030175
+Time =   3.65543103 seconds
+Final Time is Mon Jun 15 18:15:36 BRT 2020
+
+--------------------------------------
+Running PBS epilogue.user script
+
+End of PBS epilogue.user script
+
+--------------------------------------
+Running PBS epilogue script
+
+Disabling access of user pp12720 on the batch nodes
+Doing node grad04
+
+ -- Killing all stale user  processes... done.
+ -- Cleaning-up any shmemory segments... done.
+Doing node grad05
+
+ -- Killing all stale user  processes... done.
+ -- Cleaning-up any shmemory segments... done.
+Doing node grad06
+
+ -- Killing all stale user  processes... done.
+ -- Cleaning-up any shmemory segments... done.
+Doing node grad07
+
+ -- Killing all stale user  processes... done.
+ -- Cleaning-up any shmemory segments... done.
+
+Done.
+
+Resources used:
+
+ -- CPU TIME     = 00:07:11 
+
+ -- MEMORY       = 208560kb 
+
+ -- VIRTUAL MEM  = 7320956kb 
+
+ -- ELAPSED TIME = 00:00:18 
+
