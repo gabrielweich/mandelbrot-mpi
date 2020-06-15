@@ -13,10 +13,14 @@ struct complex
 
 int main(int argc, char *argv[])
 {
+    int id, p;
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &id);
+    MPI_Comm_size(MPI_COMM_WORLD, &p);
+
     for (int NPOINTS = 500; NPOINTS <= 5000; NPOINTS += 500)
     {
         int i, j, iter, numoutside, count = 0;
-        int id, p;
         double area, error, ztemp;
         double start, finish;
         struct complex z, c;
@@ -28,10 +32,6 @@ int main(int argc, char *argv[])
    *
    *     Inner loop has the iteration z=z*z+c, and threshold test
    */
-
-        MPI_Init(&argc, &argv);
-        MPI_Comm_rank(MPI_COMM_WORLD, &id);
-        MPI_Comm_size(MPI_COMM_WORLD, &p);
 
         start = MPI_Wtime();
 
@@ -71,8 +71,8 @@ int main(int argc, char *argv[])
             printf("NPOINTS: %d | Area of Mandlebrot set = %12.8f +/- %12.8f\n", NPOINTS, area, error);
             printf("Time = %12.8f seconds\n", finish - start);
         }
-
-        MPI_Finalize();
     }
+
+    MPI_Finalize();
     return 0;
 }
