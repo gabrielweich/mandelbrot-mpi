@@ -7,7 +7,7 @@ parallel_mpi_openmp.o: parallel_mpi_openmp.c
 	mpicc -fopenmp parallel_mpi_openmp.c -o parallel_mpi_openmp.o
 
 sequential.o: sequential.c
-	gcc -fopenmp sequential.c -o sequential.o
+	gcc -fopenmp -std=c99 sequential.c -o sequential.o
 
 clean:
 	rm -rf *.o
