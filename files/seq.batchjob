@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -m abe
+#PBS -V
+#PBS -l nodes=1:ppn=1:cluster-Grad,walltime=00:30:00
+#PBS -M gabriel.weich@acad.pucrs.br
+#PBS -r n
+#PBS -j oe
+#PBS -d /home/pp12720/mandelbrot-mpi
+################
+echo Running on host `hostname`
+echo
+echo Initial Time is `date`
+echo
+echo Directory is `pwd`
+echo
+echo This jobs runs on the following nodes:
+echo `cat $PBS_NODEFILE | uniq`
+echo
+echo JOB_ID:
+echo `echo $PBS_JOBID`
+echo ################
+./sequential.o
+echo Final Time is `date`
